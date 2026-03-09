@@ -365,8 +365,6 @@ footer a:hover{opacity:.7;}
       <div class="modal-sub">Enter your email below to unlock <strong>10 more free scripts</strong> instantly — no payment needed.</div>
     </div>
     <div class="modal-body">
-
-      <!-- EMAIL FORM (shown first) -->
       <div id="emailFormWrap">
         <div style="background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.2);padding:16px 18px;margin-bottom:22px;font-size:13px;color:var(--text);line-height:1.6;">
           ✦ Join <strong style="color:var(--green)" id="emailSubCount">2,400+</strong> creators using ScriptAI. Get 10 more scripts free + tips on growing your channel.
@@ -383,20 +381,17 @@ footer a:hover{opacity:.7;}
           <a href="https://wa.me/966560369632?text=Hi%20Morninglight%2C%20I%20want%20ScriptAI%20Pro%20-%20%249.99%2Fmonth" target="_blank" style="font-size:12px;color:var(--green);text-decoration:none;border:1px solid rgba(0,230,118,0.3);padding:7px 16px;transition:background .2s;" onmouseover="this.style.background='var(--glow)'" onmouseout="this.style.background='transparent'">Upgrade to Pro — $9.99/mo →</a>
         </div>
       </div>
-
-      <!-- SUCCESS STATE (shown after email submitted) -->
       <div id="emailSuccessWrap" style="display:none;text-align:center;padding:20px 0;">
         <div style="font-size:48px;margin-bottom:16px;">🎉</div>
         <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:800;margin-bottom:8px;">You're unlocked!</div>
         <div style="color:var(--text);font-size:14px;margin-bottom:24px;">10 more scripts added to your account. Keep creating!</div>
         <button class="btn-upgrade" onclick="closeEmailModal()">✦ Continue Generating Scripts</button>
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- UPGRADE MODAL (shows after email scripts used) -->
+<!-- UPGRADE MODAL -->
 <div class="modal-overlay" id="upgradeModal">
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('upgradeModal').classList.remove('show')">✕</button>
@@ -439,7 +434,6 @@ footer a:hover{opacity:.7;}
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-glow"></div>
   <div class="hero-left">
@@ -469,10 +463,7 @@ footer a:hover{opacity:.7;}
   </div>
 </div>
 
-<!-- MAIN LAYOUT -->
 <div class="page">
-
-  <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="sb-header">
       <div class="sb-title">Script Builder</div>
@@ -497,9 +488,7 @@ footer a:hover{opacity:.7;}
     </div>
   </div>
 
-  <!-- CONTENT PANELS -->
   <div class="content">
-
     <!-- STEP 0: PLATFORM -->
     <div class="step-panel active" id="panel0">
       <div class="panel-header">
@@ -507,66 +496,26 @@ footer a:hover{opacity:.7;}
         <div><div class="ph-title">Choose Your Platform</div><div class="ph-desc">Pick the platform you're creating content for. The AI adapts the script format, length and style to match exactly.</div></div>
       </div>
       <div class="platform-grid" id="platGrid">
-        <div class="plat-card" onclick="selectPlatform(this,'YouTube','▶️','Long-form video scripts with full hook, sections, timestamps & CTA. Optimized for watch time and retention.','10-20 min','standard')">
-          <div class="plat-icon">▶️</div><div class="plat-name">YouTube</div><div class="plat-desc">Long-form video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'TikTok','🎵','Short punchy scripts that hook in 2 seconds and keep viewers watching the full clip.','15-60 sec','short')">
-          <div class="plat-icon">🎵</div><div class="plat-name">TikTok</div><div class="plat-desc">Short-form video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Instagram Reels','📸','Fast, visual scripts for Reels. Energetic, trendy, designed for shares and saves.','15-90 sec','short')">
-          <div class="plat-icon">📸</div><div class="plat-name">Instagram Reels</div><div class="plat-desc">Short video / Reels</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Instagram Video','📷','Longer Instagram video content — IGTV or carousel video scripts.','1-10 min','standard')">
-          <div class="plat-icon">📷</div><div class="plat-name">Instagram Video</div><div class="plat-desc">IGTV / longer video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Facebook Video','👥','Facebook video scripts — educational, emotional or news-style content that drives shares.','3-15 min','standard')">
-          <div class="plat-icon">👥</div><div class="plat-name">Facebook Video</div><div class="plat-desc">Facebook video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Facebook Reel','🎬','Short punchy Facebook Reels scripts with strong hooks optimized for the feed.','15-60 sec','short')">
-          <div class="plat-icon">🎬</div><div class="plat-name">Facebook Reel</div><div class="plat-desc">Short Reel</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'LinkedIn Video','💼','Professional video content — thought leadership, career advice, business stories and insights.','1-5 min','professional')">
-          <div class="plat-icon">💼</div><div class="plat-name">LinkedIn Video</div><div class="plat-desc">Professional video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'LinkedIn Post','📝','Written post scripts — carousels, text posts or storytelling posts for LinkedIn feed.','300-1000 words','written')">
-          <div class="plat-icon">📝</div><div class="plat-name">LinkedIn Post</div><div class="plat-desc">Written post</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Twitter / X Thread','🐦','Viral thread scripts — hook tweet + 8-15 follow-up tweets that build suspense and go viral.','10-20 tweets','thread')">
-          <div class="plat-icon">🐦</div><div class="plat-name">Twitter / X Thread</div><div class="plat-desc">Thread / viral post</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Twitter / X Post','⚡','Single punchy tweet or short-form post. Bold, concise and designed to get replies and RTs.','280 chars','tweet')">
-          <div class="plat-icon">⚡</div><div class="plat-name">Twitter / X Post</div><div class="plat-desc">Single tweet</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Podcast Episode','🎙️','Full podcast episode scripts — intro, guest intro, talking points, transitions, and outro.','20-60 min','podcast')">
-          <div class="plat-icon">🎙️</div><div class="plat-name">Podcast Episode</div><div class="plat-desc">Full episode</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Podcast Clip','🎧','Short punchy podcast clip scripts — designed to be cut and shared on social media.','1-3 min','short')">
-          <div class="plat-icon">🎧</div><div class="plat-name">Podcast Clip</div><div class="plat-desc">Short clip</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Snapchat','👻','Ultra-short, casual, raw and direct Snapchat stories or spotlight videos.','10-60 sec','short')">
-          <div class="plat-icon">👻</div><div class="plat-name">Snapchat</div><div class="plat-desc">Story / Spotlight</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Pinterest Video','📌','Inspirational, tutorial-style or how-to Pinterest video scripts — visual and step-by-step.','15-60 sec','short')">
-          <div class="plat-icon">📌</div><div class="plat-name">Pinterest Video</div><div class="plat-desc">Video Pin</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Twitch Stream','🎮','Live stream scripts and segment scripts — intro, transitions, raid messages, and outros.','varies','stream')">
-          <div class="plat-icon">🎮</div><div class="plat-name">Twitch Stream</div><div class="plat-desc">Live stream script</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Threads Post','💬','Conversational, engaging Threads posts — short takes, opinions, mini stories and polls.','150-500 chars','short')">
-          <div class="plat-icon">💬</div><div class="plat-name">Threads Post</div><div class="plat-desc">Conversational post</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'YouTube Shorts','🩳','60-second YouTube Shorts scripts — fast hook, punchy content, strong close.','60 sec','short')">
-          <div class="plat-icon">🩳</div><div class="plat-name">YouTube Shorts</div><div class="plat-desc">60-sec vertical</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'WhatsApp Status','💚','30-second WhatsApp status video scripts — personal, direct and conversational.','30 sec','short')">
-          <div class="plat-icon">💚</div><div class="plat-name">WhatsApp Status</div><div class="plat-desc">Status video</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Telegram Channel Post','✈️','Telegram channel message scripts — informative, newsworthy, and community-driven.','100-500 words','written')">
-          <div class="plat-icon">✈️</div><div class="plat-name">Telegram Post</div><div class="plat-desc">Channel post</div>
-        </div>
-        <div class="plat-card" onclick="selectPlatform(this,'Website / Blog Video','🌐','Embedded website or blog video scripts — professional, evergreen content.','2-10 min','standard')">
-          <div class="plat-icon">🌐</div><div class="plat-name">Website Video</div><div class="plat-desc">Embedded video</div>
-        </div>
+        <div class="plat-card" onclick="selectPlatform(this,'YouTube','▶️','Long-form video scripts with full hook, sections, timestamps & CTA. Optimized for watch time and retention.','10-20 min','standard')"><div class="plat-icon">▶️</div><div class="plat-name">YouTube</div><div class="plat-desc">Long-form video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'TikTok','🎵','Short punchy scripts that hook in 2 seconds and keep viewers watching the full clip.','15-60 sec','short')"><div class="plat-icon">🎵</div><div class="plat-name">TikTok</div><div class="plat-desc">Short-form video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Instagram Reels','📸','Fast, visual scripts for Reels. Energetic, trendy, designed for shares and saves.','15-90 sec','short')"><div class="plat-icon">📸</div><div class="plat-name">Instagram Reels</div><div class="plat-desc">Short video / Reels</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Instagram Video','📷','Longer Instagram video content — IGTV or carousel video scripts.','1-10 min','standard')"><div class="plat-icon">📷</div><div class="plat-name">Instagram Video</div><div class="plat-desc">IGTV / longer video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Facebook Video','👥','Facebook video scripts — educational, emotional or news-style content that drives shares.','3-15 min','standard')"><div class="plat-icon">👥</div><div class="plat-name">Facebook Video</div><div class="plat-desc">Facebook video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Facebook Reel','🎬','Short punchy Facebook Reels scripts with strong hooks optimized for the feed.','15-60 sec','short')"><div class="plat-icon">🎬</div><div class="plat-name">Facebook Reel</div><div class="plat-desc">Short Reel</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'LinkedIn Video','💼','Professional video content — thought leadership, career advice, business stories and insights.','1-5 min','professional')"><div class="plat-icon">💼</div><div class="plat-name">LinkedIn Video</div><div class="plat-desc">Professional video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'LinkedIn Post','📝','Written post scripts — carousels, text posts or storytelling posts for LinkedIn feed.','300-1000 words','written')"><div class="plat-icon">📝</div><div class="plat-name">LinkedIn Post</div><div class="plat-desc">Written post</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Twitter / X Thread','🐦','Viral thread scripts — hook tweet + 8-15 follow-up tweets that build suspense and go viral.','10-20 tweets','thread')"><div class="plat-icon">🐦</div><div class="plat-name">Twitter / X Thread</div><div class="plat-desc">Thread / viral post</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Twitter / X Post','⚡','Single punchy tweet or short-form post. Bold, concise and designed to get replies and RTs.','280 chars','tweet')"><div class="plat-icon">⚡</div><div class="plat-name">Twitter / X Post</div><div class="plat-desc">Single tweet</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Podcast Episode','🎙️','Full podcast episode scripts — intro, guest intro, talking points, transitions, and outro.','20-60 min','podcast')"><div class="plat-icon">🎙️</div><div class="plat-name">Podcast Episode</div><div class="plat-desc">Full episode</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Podcast Clip','🎧','Short punchy podcast clip scripts — designed to be cut and shared on social media.','1-3 min','short')"><div class="plat-icon">🎧</div><div class="plat-name">Podcast Clip</div><div class="plat-desc">Short clip</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Snapchat','👻','Ultra-short, casual, raw and direct Snapchat stories or spotlight videos.','10-60 sec','short')"><div class="plat-icon">👻</div><div class="plat-name">Snapchat</div><div class="plat-desc">Story / Spotlight</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Pinterest Video','📌','Inspirational, tutorial-style or how-to Pinterest video scripts — visual and step-by-step.','15-60 sec','short')"><div class="plat-icon">📌</div><div class="plat-name">Pinterest Video</div><div class="plat-desc">Video Pin</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Twitch Stream','🎮','Live stream scripts and segment scripts — intro, transitions, raid messages, and outros.','varies','stream')"><div class="plat-icon">🎮</div><div class="plat-name">Twitch Stream</div><div class="plat-desc">Live stream script</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Threads Post','💬','Conversational, engaging Threads posts — short takes, opinions, mini stories and polls.','150-500 chars','short')"><div class="plat-icon">💬</div><div class="plat-name">Threads Post</div><div class="plat-desc">Conversational post</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'YouTube Shorts','🩳','60-second YouTube Shorts scripts — fast hook, punchy content, strong close.','60 sec','short')"><div class="plat-icon">🩳</div><div class="plat-name">YouTube Shorts</div><div class="plat-desc">60-sec vertical</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'WhatsApp Status','💚','30-second WhatsApp status video scripts — personal, direct and conversational.','30 sec','short')"><div class="plat-icon">💚</div><div class="plat-name">WhatsApp Status</div><div class="plat-desc">Status video</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Telegram Channel Post','✈️','Telegram channel message scripts — informative, newsworthy, and community-driven.','100-500 words','written')"><div class="plat-icon">✈️</div><div class="plat-name">Telegram Post</div><div class="plat-desc">Channel post</div></div>
+        <div class="plat-card" onclick="selectPlatform(this,'Website / Blog Video','🌐','Embedded website or blog video scripts — professional, evergreen content.','2-10 min','standard')"><div class="plat-icon">🌐</div><div class="plat-name">Website Video</div><div class="plat-desc">Embedded video</div></div>
       </div>
       <div class="step-nav">
         <span class="step-ind">STEP 1 OF 7</span>
@@ -821,7 +770,6 @@ footer a:hover{opacity:.7;}
           <textarea id="xtraInst" rows="4" placeholder="e.g. Include 3 statistics, add humor, mention Saudi Arabia, avoid politics, start with a question, promote my product called X..."></textarea>
         </div>
       </div>
-
       <div class="section-label">Script Extras — Toggle On / Off</div>
       <div class="toggle-row"><div><div class="toggle-label">Include Timestamps</div><div class="toggle-desc">Add (0:00) (1:30) markers at the start of each section</div></div><div class="toggle on" id="tog0" onclick="togOpt(this)"></div></div>
       <div class="toggle-row"><div><div class="toggle-label">Include [PAUSE] Markers</div><div class="toggle-desc">Mark where to pause for dramatic effect</div></div><div class="toggle on" id="tog1" onclick="togOpt(this)"></div></div>
@@ -831,7 +779,6 @@ footer a:hover{opacity:.7;}
       <div class="toggle-row"><div><div class="toggle-label">Include Title / Headline Suggestions</div><div class="toggle-desc">AI suggests 5 viral title or headline options</div></div><div class="toggle" id="tog5" onclick="togOpt(this)"></div></div>
       <div class="toggle-row"><div><div class="toggle-label">Include Caption / Description & Hashtags</div><div class="toggle-desc">AI writes a platform-optimized caption/description + hashtags</div></div><div class="toggle" id="tog6" onclick="togOpt(this)"></div></div>
       <div class="toggle-row"><div><div class="toggle-label">Include Hook Variations</div><div class="toggle-desc">AI writes 3 alternative hook options to A/B test</div></div><div class="toggle" id="tog7" onclick="togOpt(this)"></div></div>
-
       <div class="step-nav">
         <button class="btn-back" onclick="goStep(5)">← Back</button>
         <span class="step-ind">STEP 7 OF 7</span>
@@ -860,7 +807,6 @@ footer a:hover{opacity:.7;}
       </div>
       <button class="btn-generate" id="genBtn" onclick="generate()">✦ Generate My Script Now</button>
       <p class="gen-note">100% Free · No Sign Up · Unlimited Generations · Powered by Morninglight AI</p>
-
       <div class="prog-wrap" id="progWrap">
         <p class="prog-title">Writing Your Script</p>
         <p class="prog-sub">AI is crafting a professional script tailored to your platform and topic</p>
@@ -888,7 +834,6 @@ footer a:hover{opacity:.7;}
           <button class="btn-ghost" onclick="regenerate()">↺ Regenerate</button>
           <button class="btn-ghost" onclick="goStep(0)">✎ Edit Settings</button>
         </div>
-        <!-- AGENCY BANNER -->
         <div class="agency-banner">
           <div class="ab-left">
             <div class="ab-eyebrow">✦ Want More Than a Script?</div>
@@ -905,20 +850,14 @@ footer a:hover{opacity:.7;}
             <a class="btn-agency-ghost" href="https://onukelechi207-sketch.github.io/morninglight/" target="_blank">View Morninglight AI Agency</a>
           </div>
         </div>
-        <!-- AD SLOT AFTER RESULT -->
         <div class="ad-slot">
           <div class="ad-label">Advertisement</div>
-          <div class="ad-inner">
-            <!-- Replace this comment with your Google AdSense code -->
-            <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-            <span>Ad space — connect Google AdSense here</span>
-          </div>
+          <div class="ad-inner"><span>Ad space — connect Google AdSense here</span></div>
         </div>
       </div>
     </div>
-
-  </div><!-- end content -->
-</div><!-- end page -->
+  </div>
+</div>
 
 <!-- HOW IT WORKS -->
 <div id="how">
@@ -945,7 +884,7 @@ footer a:hover{opacity:.7;}
   </div>
 </div>
 
-<!-- AFFILIATE TOOLS SECTION -->
+<!-- AFFILIATE -->
 <div class="affiliate-section" id="tools">
   <div class="aff-header">
     <div class="aff-title-area">
@@ -954,71 +893,19 @@ footer a:hover{opacity:.7;}
       <div class="aff-sub">Tools used by top creators — we earn a small commission if you sign up (at no extra cost to you)</div>
     </div>
   </div>
-  <!-- AD SLOT TOP OF AFFILIATE -->
   <div class="ad-slot" style="margin-bottom:24px;">
     <div class="ad-label">Advertisement</div>
-    <div class="ad-inner">
-      <!-- Replace with Google AdSense leaderboard (728x90) code -->
-      <span>Ad space — connect Google AdSense here</span>
-    </div>
+    <div class="ad-inner"><span>Ad space — connect Google AdSense here</span></div>
   </div>
   <div class="aff-grid">
-    <a class="aff-card" href="https://www.capcut.com/" target="_blank" rel="noopener">
-      <div class="aff-icon">🎬</div>
-      <div class="aff-name">CapCut</div>
-      <div class="aff-desc">Free video editor for TikTok, Reels & YouTube Shorts. Auto-captions, effects, and templates.</div>
-      <div class="aff-tag">Free Video Editing</div>
-      <span class="aff-arrow">Try CapCut →</span>
-    </a>
-    <a class="aff-card" href="https://www.canva.com/" target="_blank" rel="noopener">
-      <div class="aff-icon">🎨</div>
-      <div class="aff-name">Canva</div>
-      <div class="aff-desc">Design thumbnails, social media posts, and graphics in minutes. Drag-and-drop, no skills needed.</div>
-      <div class="aff-tag">Design & Thumbnails</div>
-      <span class="aff-arrow">Try Canva →</span>
-    </a>
-    <a class="aff-card" href="https://www.tubebuddy.com/" target="_blank" rel="noopener">
-      <div class="aff-icon">📈</div>
-      <div class="aff-name">TubeBuddy</div>
-      <div class="aff-desc">YouTube SEO tool that helps your videos rank higher. Keyword research, A/B testing, analytics.</div>
-      <div class="aff-tag">YouTube SEO</div>
-      <span class="aff-arrow">Try TubeBuddy →</span>
-    </a>
-    <a class="aff-card" href="https://vidiq.com/morninglightai" target="_blank" rel="noopener">
-      <div class="aff-icon">🔍</div>
-      <div class="aff-name">VidIQ</div>
-      <div class="aff-desc">YouTube growth tool. Find trending topics, optimize titles and tags, and grow your channel faster.</div>
-      <div class="aff-tag">YouTube Growth</div>
-      <span class="aff-arrow">Try VidIQ →</span>
-    </a>
-    <a class="aff-card" href="https://www.descript.com/" target="_blank" rel="noopener">
-      <div class="aff-icon">🎙️</div>
-      <div class="aff-name">Descript</div>
-      <div class="aff-desc">Record, edit, and publish podcasts and videos by editing text. Best for creators who hate editing.</div>
-      <div class="aff-tag">Podcast & Video Edit</div>
-      <span class="aff-arrow">Try Descript →</span>
-    </a>
-    <a class="aff-card" href="https://buffer.com/" target="_blank" rel="noopener">
-      <div class="aff-icon">📅</div>
-      <div class="aff-name">Buffer</div>
-      <div class="aff-desc">Schedule and auto-post to Instagram, TikTok, LinkedIn, Twitter, Facebook and more from one dashboard.</div>
-      <div class="aff-tag">Social Media Scheduler</div>
-      <span class="aff-arrow">Try Buffer →</span>
-    </a>
-    <a class="aff-card" href="https://try.elevenlabs.io/zap8kdy3pb0k" target="_blank" rel="noopener">
-      <div class="aff-icon">🔊</div>
-      <div class="aff-name">ElevenLabs</div>
-      <div class="aff-desc">AI voice generator. Turn your scripts into realistic voiceovers in seconds — perfect for faceless channels.</div>
-      <div class="aff-tag">AI Voiceover</div>
-      <span class="aff-arrow">Try ElevenLabs →</span>
-    </a>
-    <a class="aff-card" href="https://www.invideo.io/" target="_blank" rel="noopener">
-      <div class="aff-icon">🎥</div>
-      <div class="aff-name">InVideo AI</div>
-      <div class="aff-desc">Turn your scripts into full videos automatically with AI. Footage, voiceover, captions — all done for you.</div>
-      <div class="aff-tag">AI Video Creation</div>
-      <span class="aff-arrow">Try InVideo →</span>
-    </a>
+    <a class="aff-card" href="https://www.capcut.com/" target="_blank" rel="noopener"><div class="aff-icon">🎬</div><div class="aff-name">CapCut</div><div class="aff-desc">Free video editor for TikTok, Reels & YouTube Shorts. Auto-captions, effects, and templates.</div><div class="aff-tag">Free Video Editing</div><span class="aff-arrow">Try CapCut →</span></a>
+    <a class="aff-card" href="https://www.canva.com/" target="_blank" rel="noopener"><div class="aff-icon">🎨</div><div class="aff-name">Canva</div><div class="aff-desc">Design thumbnails, social media posts, and graphics in minutes. Drag-and-drop, no skills needed.</div><div class="aff-tag">Design & Thumbnails</div><span class="aff-arrow">Try Canva →</span></a>
+    <a class="aff-card" href="https://www.tubebuddy.com/" target="_blank" rel="noopener"><div class="aff-icon">📈</div><div class="aff-name">TubeBuddy</div><div class="aff-desc">YouTube SEO tool that helps your videos rank higher. Keyword research, A/B testing, analytics.</div><div class="aff-tag">YouTube SEO</div><span class="aff-arrow">Try TubeBuddy →</span></a>
+    <a class="aff-card" href="https://vidiq.com/morninglightai" target="_blank" rel="noopener"><div class="aff-icon">🔍</div><div class="aff-name">VidIQ</div><div class="aff-desc">YouTube growth tool. Find trending topics, optimize titles and tags, and grow your channel faster.</div><div class="aff-tag">YouTube Growth</div><span class="aff-arrow">Try VidIQ →</span></a>
+    <a class="aff-card" href="https://www.descript.com/" target="_blank" rel="noopener"><div class="aff-icon">🎙️</div><div class="aff-name">Descript</div><div class="aff-desc">Record, edit, and publish podcasts and videos by editing text. Best for creators who hate editing.</div><div class="aff-tag">Podcast & Video Edit</div><span class="aff-arrow">Try Descript →</span></a>
+    <a class="aff-card" href="https://buffer.com/" target="_blank" rel="noopener"><div class="aff-icon">📅</div><div class="aff-name">Buffer</div><div class="aff-desc">Schedule and auto-post to Instagram, TikTok, LinkedIn, Twitter, Facebook and more from one dashboard.</div><div class="aff-tag">Social Media Scheduler</div><span class="aff-arrow">Try Buffer →</span></a>
+    <a class="aff-card" href="https://try.elevenlabs.io/zap8kdy3pb0k" target="_blank" rel="noopener"><div class="aff-icon">🔊</div><div class="aff-name">ElevenLabs</div><div class="aff-desc">AI voice generator. Turn your scripts into realistic voiceovers in seconds — perfect for faceless channels.</div><div class="aff-tag">AI Voiceover</div><span class="aff-arrow">Try ElevenLabs →</span></a>
+    <a class="aff-card" href="https://www.invideo.io/" target="_blank" rel="noopener"><div class="aff-icon">🎥</div><div class="aff-name">InVideo AI</div><div class="aff-desc">Turn your scripts into full videos automatically with AI. Footage, voiceover, captions — all done for you.</div><div class="aff-tag">AI Video Creation</div><span class="aff-arrow">Try InVideo →</span></a>
   </div>
 </div>
 
@@ -1029,9 +916,13 @@ footer a:hover{opacity:.7;}
 </footer>
 
 <script>
+// ════════════════════════════════════════════
+// ⚠️  PASTE YOUR GROQ API KEY BELOW
+//     Get it free at: console.groq.com
+// ════════════════════════════════════════════
+var GROQ_API_KEY = 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
 var S={platform:'',platInfo:{},cat:'',len:'Medium (5–10 minutes)',tone:'Engaging & Conversational',aud:[],toggles:[true,true,true,false,false,false,false,false],lastPrompt:''};
 
-// Platform data
 var PLAT={
   'YouTube':{fmt:'Write a full YouTube video script with [HOOK] (first 30s), [INTRO], numbered [SECTION] headings, [CALL TO ACTION], and [OUTRO]. Include timestamps. Optimized for watch time and retention.',cta:'ask viewers to subscribe and enable notifications'},
   'TikTok':{fmt:'Write a TikTok video script. It MUST hook the viewer in the first 2 seconds or they scroll. Keep it punchy, fast, trend-aware. Include [HOOK], [CONTENT], [CTA]. No fluff — every word counts.',cta:'ask viewers to follow and share'},
@@ -1058,17 +949,14 @@ var PLAT={
 function selectPlatform(el,name,icon,desc,len,fmt){
   document.querySelectorAll('.plat-card').forEach(c=>c.classList.remove('on'));
   el.classList.add('on');
-  S.platform=name;
-  S.platInfo={icon,desc,len,fmt};
+  S.platform=name;S.platInfo={icon,desc,len,fmt};
   document.getElementById('sv0').textContent=name;
-  // Show platform info banner on step 1
   document.getElementById('platInfoBanner').style.display='flex';
   document.getElementById('pib-icon').textContent=icon;
   document.getElementById('pib-name').textContent=name+' Script';
   document.getElementById('pib-desc').textContent=desc;
 }
 
-// STEP NAVIGATION
 var cur=0;
 function goStep(n){
   document.querySelectorAll('.step-panel').forEach((p,i)=>p.classList.toggle('active',i===n));
@@ -1094,8 +982,7 @@ function setEx(el){
 
 function pickTag(el,key){
   el.closest('.tags').querySelectorAll('.tag').forEach(t=>t.classList.remove('on'));
-  el.classList.add('on');
-  S[key]=el.textContent.trim();
+  el.classList.add('on');S[key]=el.textContent.trim();
   if(key==='cat')document.getElementById('sv2').textContent=S.cat;
   if(key==='len')document.getElementById('sv3').textContent=S.len=el.textContent.trim();
   if(key==='tone')document.getElementById('sv4').textContent=S.tone=el.textContent.trim();
@@ -1135,6 +1022,17 @@ function updateAudCount(){
   document.getElementById('selCount').textContent=S.aud.length===0?'':'✓ '+S.aud.length+' audience'+(S.aud.length>1?'s':'')+' selected: '+S.aud.join(', ');
 }
 
+async function groqCall(messages, maxTokens){
+  var r=await fetch("https://api.groq.com/openai/v1/chat/completions",{
+    method:"POST",
+    headers:{"Content-Type":"application/json","Authorization":"Bearer "+GROQ_API_KEY},
+    body:JSON.stringify({model:"llama3-8b-8192",max_tokens:maxTokens,messages:messages})
+  });
+  var d=await r.json();
+  if(d.error) throw new Error(d.error.message||'Groq API error');
+  return d.choices[0].message.content;
+}
+
 async function suggestAud(){
   var topic=document.getElementById('topicInput').value.trim();
   if(!topic){alert('Please enter your topic on Step 2 first!');goStep(1);return;}
@@ -1142,9 +1040,8 @@ async function suggestAud(){
   btn.classList.add('loading');
   btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Analyzing topic...';
   try{
-    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-haiku-4-5-20251001",max_tokens:200,messages:[{role:"user",content:`For content about: "${topic}" on ${S.platform||'social media'}, give 5 most relevant target audiences. Return ONLY a valid JSON array of short strings. No preamble no markdown. Example: ["Entrepreneurs","Young Adults (18-25)","Students"]`}]})});
-    var d=await r.json();
-    var arr=JSON.parse(d.content[0].text.trim().replace(/```json|```/g,'').trim());
+    var text=await groqCall([{role:"user",content:`For content about: "${topic}" on ${S.platform||'social media'}, give 5 most relevant target audiences. Return ONLY a valid JSON array of short strings. No preamble no markdown. Example: ["Entrepreneurs","Young Adults (18-25)","Students"]`}],200);
+    var arr=JSON.parse(text.trim().replace(/```json|```/g,'').trim());
     document.querySelectorAll('.aud-chip.on').forEach(c=>{c.classList.remove('on');c.querySelector('.aud-ck').textContent='';});
     S.aud=[];
     var g=document.getElementById('audGrid');
@@ -1189,7 +1086,6 @@ async function generate(){
   var topic=document.getElementById('topicInput').value.trim();
   if(!topic){alert('Please enter a topic on Step 2!');goStep(1);return;}
   if(!S.platform){alert('Please select a platform on Step 1!');goStep(0);return;}
-  // PAYWALL CHECK
   if(!checkAndIncrementCounter()) return;
 
   var cat=S.cat||'General';
@@ -1251,9 +1147,7 @@ Make it sound completely natural and human. Every word must earn its place.`;
   startProg();
 
   try{
-    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-haiku-4-5-20251001",max_tokens:4000,messages:[{role:"user",content:S.lastPrompt}]})});
-    var d=await r.json();
-    var sc=d.content&&d.content[0]?d.content[0].text:'';
+    var sc=await groqCall([{role:"user",content:S.lastPrompt}],4000);
     if(!sc)throw new Error('Empty response');
     stopProg();
     document.getElementById('progWrap').style.display='none';
@@ -1280,81 +1174,53 @@ document.addEventListener('DOMContentLoaded',()=>{
   animateSubscriberCount();
 });
 
-// ════════════════════════════════════════════
-//  EMAIL UNLOCK + SCRIPT COUNTER SYSTEM
-//  Flow:
-//   0-3   scripts → free, no email needed
-//   4     scripts → show email modal to unlock 10 more
-//   4-13  scripts → unlocked (email given)
-//   14+   scripts → show upgrade to Pro modal
-// ════════════════════════════════════════════
-
-// ── REPLACE THIS URL with your Google Apps Script Web App URL ──
-// Instructions below on how to set it up (takes 5 minutes)
+// ── SCRIPT COUNTER & PAYWALL ──
 var SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-
-var FREE_LIMIT   = 10;  // scripts before asking for email
-var UNLOCK_BONUS = 50;  // extra scripts after email
+var FREE_LIMIT   = 10;
+var UNLOCK_BONUS = 50;
 
 function getStore(){
   try{
-    var raw = localStorage.getItem('scriptai_v2');
-    if(!raw) return {count:0, emailGiven:false, email:'', date:today()};
-    var d = JSON.parse(raw);
-    // reset daily count only for non-email users
-    if(!d.emailGiven && d.date !== today()){
-      d.count = 0; d.date = today(); saveStore(d);
-    }
+    var raw=localStorage.getItem('scriptai_v2');
+    if(!raw)return{count:0,emailGiven:false,email:'',date:today()};
+    var d=JSON.parse(raw);
+    if(!d.emailGiven&&d.date!==today()){d.count=0;d.date=today();saveStore(d);}
     return d;
-  }catch(e){ return {count:0, emailGiven:false, email:'', date:today()}; }
+  }catch(e){return{count:0,emailGiven:false,email:'',date:today()};}
 }
-function saveStore(d){ try{ localStorage.setItem('scriptai_v2', JSON.stringify(d)); }catch(e){} }
-function today(){ return new Date().toISOString().split('T')[0]; }
+function saveStore(d){try{localStorage.setItem('scriptai_v2',JSON.stringify(d));}catch(e){}}
+function today(){return new Date().toISOString().split('T')[0];}
 
 function initScriptCounter(){
-  // clear old counter key from previous version
-  try{ localStorage.removeItem('scriptai_counter'); }catch(e){}
-  var d = getStore();
-  updateBadge(d);
+  try{localStorage.removeItem('scriptai_counter');}catch(e){}
+  var d=getStore();updateBadge(d);
 }
 
 function updateBadge(d){
-  var limit = d.emailGiven ? FREE_LIMIT + UNLOCK_BONUS : FREE_LIMIT;
-  var left  = Math.max(0, limit - d.count);
-  var el    = document.getElementById('scriptsLeftTxt');
-  var badge = document.getElementById('scriptsLeftBadge');
-  if(left === 0){
-    el.textContent = '0 scripts left';
-    badge.style.borderColor='rgba(255,80,80,0.4)';
-    badge.style.color='#ff8080';
-    badge.style.background='rgba(255,50,50,0.06)';
-  } else {
-    el.textContent = left + ' free script'+(left===1?'':'s')+' left';
+  var limit=d.emailGiven?FREE_LIMIT+UNLOCK_BONUS:FREE_LIMIT;
+  var left=Math.max(0,limit-d.count);
+  var el=document.getElementById('scriptsLeftTxt');
+  var badge=document.getElementById('scriptsLeftBadge');
+  if(left===0){
+    el.textContent='0 scripts left';
+    badge.style.borderColor='rgba(255,80,80,0.4)';badge.style.color='#ff8080';badge.style.background='rgba(255,50,50,0.06)';
+  }else{
+    el.textContent=left+' free script'+(left===1?'':'s')+' left';
     badge.style.borderColor='';badge.style.color='';badge.style.background='';
   }
 }
 
 function checkAndIncrementCounter(){
-  var d = getStore();
-  var limit = d.emailGiven ? FREE_LIMIT + UNLOCK_BONUS : FREE_LIMIT;
-
-  if(d.count >= limit){
-    if(!d.emailGiven){
-      // show email modal
-      document.getElementById('emailModal').classList.add('show');
-    } else {
-      // already gave email, show upgrade modal
-      document.getElementById('upgradeModal').classList.add('show');
-    }
+  var d=getStore();
+  var limit=d.emailGiven?FREE_LIMIT+UNLOCK_BONUS:FREE_LIMIT;
+  if(d.count>=limit){
+    if(!d.emailGiven){document.getElementById('emailModal').classList.add('show');}
+    else{document.getElementById('upgradeModal').classList.add('show');}
     return false;
   }
-  d.count++;
-  saveStore(d);
-  updateBadge(d);
-  return true;
+  d.count++;saveStore(d);updateBadge(d);return true;
 }
 
-// ── EMAIL MODAL ──
 function closeEmailModal(){
   document.getElementById('emailModal').classList.remove('show');
   document.getElementById('emailFormWrap').style.display='block';
@@ -1364,95 +1230,34 @@ function closeEmailModal(){
 }
 
 async function submitEmail(){
-  var email = document.getElementById('emailInput').value.trim();
-  var btn   = document.getElementById('unlockBtn');
-
-  // validate
-  if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+  var email=document.getElementById('emailInput').value.trim();
+  var btn=document.getElementById('unlockBtn');
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
     document.getElementById('emailError').textContent='Please enter a valid email address.';
-    document.getElementById('emailError').style.display='block';
-    return;
+    document.getElementById('emailError').style.display='block';return;
   }
   document.getElementById('emailError').style.display='none';
-
-  // save to localStorage
-  var d = getStore();
-  d.emailGiven = true;
-  d.email = email;
-  saveStore(d);
-  updateBadge(d);
-
-  // send email to Google Sheets (non-blocking)
+  var d=getStore();d.emailGiven=true;d.email=email;saveStore(d);updateBadge(d);
   sendEmailToSheet(email);
-
-  // show success
   btn.textContent='Saving...';
   await new Promise(r=>setTimeout(r,800));
   document.getElementById('emailFormWrap').style.display='none';
   document.getElementById('emailSuccessWrap').style.display='block';
 }
 
-// ── SEND EMAIL TO GOOGLE SHEETS ──
-// This saves every email to YOUR Google Sheet automatically
-// Setup: see instructions in the README comment below
 async function sendEmailToSheet(email){
-  if(!SHEET_URL || SHEET_URL==='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
+  if(!SHEET_URL||SHEET_URL==='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')return;
   try{
-    await fetch(SHEET_URL, {
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        email: email,
-        date: new Date().toISOString(),
-        platform: S.platform || 'unknown',
-        source: 'ScriptAI Email Unlock'
-      })
-    });
-  }catch(e){ console.log('Sheet save failed silently'); }
+    await fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,date:new Date().toISOString(),platform:S.platform||'unknown',source:'ScriptAI Email Unlock'})});
+  }catch(e){console.log('Sheet save failed silently');}
 }
 
-// ── ANIMATE SUBSCRIBER COUNT (social proof) ──
 function animateSubscriberCount(){
-  var el = document.getElementById('emailSubCount');
-  if(!el) return;
-  var target = 2400 + Math.floor(Math.random()*200);
-  el.textContent = target.toLocaleString()+'+';
+  var el=document.getElementById('emailSubCount');if(!el)return;
+  var target=2400+Math.floor(Math.random()*200);
+  el.textContent=target.toLocaleString()+'+';
 }
-
-/*
-════════════════════════════════════════════════════
-  HOW TO SET UP GOOGLE SHEETS EMAIL COLLECTION
-  (Takes 5 minutes — completely free)
-════════════════════════════════════════════════════
-
-STEP 1: Go to Google Sheets → sheets.google.com
-        Create a new sheet called "ScriptAI Emails"
-        Add headers in row 1: Email | Date | Platform | Source
-
-STEP 2: Go to Extensions → Apps Script
-
-STEP 3: Paste this code:
-
-function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
-  sheet.appendRow([data.email, data.date, data.platform, data.source]);
-  return ContentService.createTextOutput('OK');
-}
-
-STEP 4: Click Deploy → New Deployment → Web App
-        Execute as: Me
-        Who has access: Anyone
-        Click Deploy → Copy the Web App URL
-
-STEP 5: Paste the URL into the SHEET_URL variable at the top of this script
-        var SHEET_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
-
-STEP 6: Save and push to GitHub. Done!
-        Now every email goes straight to your Google Sheet.
-════════════════════════════════════════════════════
-*/
 </script>
 </body>
 </html>
