@@ -1142,7 +1142,7 @@ async function suggestAud(){
   btn.classList.add('loading');
   btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Analyzing topic...';
   try{
-    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:200,messages:[{role:"user",content:`For content about: "${topic}" on ${S.platform||'social media'}, give 5 most relevant target audiences. Return ONLY a valid JSON array of short strings. No preamble no markdown. Example: ["Entrepreneurs","Young Adults (18-25)","Students"]`}]})});
+    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-haiku-4-5-20251001",max_tokens:200,messages:[{role:"user",content:`For content about: "${topic}" on ${S.platform||'social media'}, give 5 most relevant target audiences. Return ONLY a valid JSON array of short strings. No preamble no markdown. Example: ["Entrepreneurs","Young Adults (18-25)","Students"]`}]})});
     var d=await r.json();
     var arr=JSON.parse(d.content[0].text.trim().replace(/```json|```/g,'').trim());
     document.querySelectorAll('.aud-chip.on').forEach(c=>{c.classList.remove('on');c.querySelector('.aud-ck').textContent='';});
@@ -1251,7 +1251,7 @@ Make it sound completely natural and human. Every word must earn its place.`;
   startProg();
 
   try{
-    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:4000,messages:[{role:"user",content:S.lastPrompt}]})});
+    var r=await fetch("https://scriptai-proxy.onukelechi207.workers.dev",{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({model:"claude-haiku-4-5-20251001",max_tokens:4000,messages:[{role:"user",content:S.lastPrompt}]})});
     var d=await r.json();
     var sc=d.content&&d.content[0]?d.content[0].text:'';
     if(!sc)throw new Error('Empty response');
