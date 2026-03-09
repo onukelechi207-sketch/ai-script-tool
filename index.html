@@ -1027,7 +1027,7 @@ async function groqCall(messages, maxTokens){
   var r=await fetch("https://api.groq.com/openai/v1/chat/completions",{
     method:"POST",
     headers:{"Content-Type":"application/json","Authorization":"Bearer "+GROQ_API_KEY},
-    body:JSON.stringify({model:"llama3-8b-8192",max_tokens:maxTokens,messages:messages})
+    body:JSON.stringify({model:"llama-3.3-70b-versatile",max_tokens:maxTokens,messages:messages})
   });
   var d=await r.json();
   if(d.error) throw new Error(d.error.message||'Groq API error');
