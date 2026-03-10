@@ -362,19 +362,19 @@ footer a:hover{opacity:.7;}
     <div class="modal-top">
       <div class="modal-badge">🎁 Unlock More Free Scripts</div>
       <div class="modal-title">You've Used Your 3 Free Scripts</div>
-      <div class="modal-sub">Enter your email below to unlock <strong>10 more free scripts</strong> instantly — no payment needed.</div>
+      <div class="modal-sub">Enter your email below to get <strong>bonus scripts</strong> instantly — no payment needed.</div>
     </div>
     <div class="modal-body">
       <div id="emailFormWrap">
         <div style="background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.2);padding:16px 18px;margin-bottom:22px;font-size:13px;color:var(--text);line-height:1.6;">
-          ✦ Join <strong style="color:var(--green)" id="emailSubCount">2,400+</strong> creators using ScriptAI. Get 10 more scripts free + tips on growing your channel.
+          ✦ Join <strong style="color:var(--green)" id="emailSubCount">2,400+</strong> creators using ScriptAI. Get bonus scripts + tips on growing your channel.
         </div>
         <div style="margin-bottom:14px;">
           <label style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:10px;">Your Email Address</label>
           <input type="email" id="emailInput" placeholder="you@example.com" style="width:100%;background:var(--black);border:1px solid var(--b2);color:var(--white);padding:15px 18px;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--b2)'"/>
         </div>
         <div id="emailError" style="display:none;color:#ff7070;font-size:12px;margin-bottom:12px;"></div>
-        <button class="btn-upgrade" id="unlockBtn" onclick="submitEmail()">✦ Unlock 10 Free Scripts Now</button>
+        <button class="btn-upgrade" id="unlockBtn" onclick="submitEmail()">✦ ✦ Unlock Bonus Scripts Now</button>
         <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--muted2);">No spam. Unsubscribe anytime. We hate spam too.</div>
         <div style="border-top:1px solid var(--b1);margin-top:20px;padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
           <div style="font-size:12px;color:var(--muted);">Want unlimited scripts?</div>
@@ -384,7 +384,7 @@ footer a:hover{opacity:.7;}
       <div id="emailSuccessWrap" style="display:none;text-align:center;padding:20px 0;">
         <div style="font-size:48px;margin-bottom:16px;">🎉</div>
         <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:800;margin-bottom:8px;">You're unlocked!</div>
-        <div style="color:var(--text);font-size:14px;margin-bottom:24px;">10 more scripts added to your account. Keep creating!</div>
+        <div style="color:var(--text);font-size:14px;margin-bottom:24px;">Bonus scripts added! Keep creating!. Keep creating!</div>
         <button class="btn-upgrade" onclick="closeEmailModal()">✦ Continue Generating Scripts</button>
       </div>
     </div>
@@ -430,7 +430,7 @@ footer a:hover{opacity:.7;}
     <a class="nav-l" href="#how">How It Works</a>
     <a class="nav-l" href="#features">Features</a>
     <div class="scripts-left-badge" id="scriptsLeftBadge">⚡ <span id="scriptsLeftTxt">3 free scripts left</span></div>
-    <a class="nav-btn" href="https://wa.me/966560369632?text=Hi%20Morninglight%2C%20I%20want%20to%20upgrade%20to%20ScriptAI%20Pro" target="_blank">Upgrade Pro →</a>
+    <a class="nav-btn" href="https://www.paypal.com/paypalme/onukelechi207/9.99" target="_blank">Upgrade Pro $9.99 →</a>
   </div>
 </nav>
 
@@ -1178,7 +1178,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 // ── SCRIPT COUNTER & PAYWALL ──
 var SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 var FREE_LIMIT   = 5;
-var UNLOCK_BONUS = 50;
+var UNLOCK_BONUS = 0;
 
 function getStore(){
   try{
